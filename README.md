@@ -20,8 +20,12 @@ A simple rich text editor preview built in HTML, CSS and JS. No frameworks
 * [x] It should have buttons for text alignment
 * [x] It should have a counter for characters
 * [x] It should have select for font families
+* [ ] It should indent text
+* [ ] It should add emphasis, strong or italic styling
+* [ ] It should have underline functionality
+* [ ] On enter it should add new line
 
-## New Features
+## Upcoming work
 * [ ] Indenting text
 * [ ] Bold, epmphasis, italic
 * [ ] Underline
