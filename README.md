@@ -12,12 +12,15 @@
 
 ## Requirements
 
-* [ ] It should have a text area for writing text
-* [ ] It should have a range input for changing font size (*note: change to select?*)
-* [ ] It should have a color input for changing font color
-* [ ] It should have buttons for text alignment
-* [ ] It should have a counter for characters
-* [ ] It should have select for font families
+* [x] It should have a text area for writing text
+* [x] It should have a range input for changing font size (*note: change to select?*)
+* [x] It should have a color input for changing font color
+* [x] It should have buttons for text alignment
+* [x] It should have a counter for characters
+* [x] It should have select for font families
+
+## New Features
+* [ ] ??
 
 ## Outcome
 
