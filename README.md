@@ -1,5 +1,7 @@
 # Simple Text Editor
 
+A simple rich text editor preview built in HTML, CSS and JS. No frameworks
+
 ## Technical Stack
 
 * HTML & CSS and JS
@@ -20,7 +22,10 @@
 * [x] It should have select for font families
 
 ## New Features
-* [ ] ??
+* [ ] Indenting text
+* [ ] Bold, epmphasis, italic
+* [ ] Underline
+* [ ] Pressing enter key, creates new line
 
 ## Outcome
 
