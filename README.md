@@ -4,7 +4,7 @@
 
 * HTML & CSS and JS
 
-## Setup
+## Local Setup
 
 * [ ] Linting
 * [ ] Hooks (Husky)
@@ -26,3 +26,6 @@
 
 * Learn about new event listeners
 * JS inline style manipulation
+
+## Demo
+[Link](https://jsfiddle.net/tomasvn/syuoz1mg/)
