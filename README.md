@@ -23,13 +23,15 @@ A simple rich text editor preview built in HTML, CSS and JS. No frameworks
 * [ ] It should indent text
 * [ ] It should add emphasis, strong or italic styling
 * [ ] It should have underline functionality
-* [ ] On enter it should add new line
+* [ ] It should add new line on enter
+* [ ] It should have an option for limiting characters
 
 ## Upcoming work
 * [ ] Indenting text
 * [ ] Bold, epmphasis, italic
 * [ ] Underline
 * [ ] Pressing enter key, creates new line
+* [ ] Limit written characters
 
 ## Outcome
 
