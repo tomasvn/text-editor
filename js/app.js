@@ -15,7 +15,8 @@ let selector = {
   'bta': Array.from(document.querySelectorAll('.js-btn')), /* ES5 [].slice.call(document.querySelectorAll('.js-btn')) */
   'num': document.querySelector('.js-number'),
   'opt': document.querySelector('.js-font-select'),
-  'con': document.querySelector('.js-count')
+  'con': document.querySelector('.js-count'),
+  'lim': document.querySelector('.js-char-limit')
 }
 
 let printText = () => {
@@ -58,30 +59,41 @@ let changeFont = () => {
   }
 }
 
+let changeLimit = () => {
+  /**
+   * Cannot use === in if statement for checking equality with number value
+   * if I want to use === for equality check convert the value to string or convert it to number
+   * or use loose equal, but avoid if possible
+   * <input type="number"> returns string
+   * 
+   * if(selector.lim.value === 400) {}
+   */
+
+  if(selector.lim.value > '0') {
+    //return console.log(typeof(selector.lim.value))
+    return selector.ar.setAttribute('maxlength', selector.lim.value)
+  }
+}
+
 selector.ar.addEventListener('keyup', printText)
 selector.sl.addEventListener('input', changeSize)
 selector.co.addEventListener('input', changeColor)
 selector.num.addEventListener('input', changeRhytm)
 selector.opt.addEventListener('change', changeFont)
+selector.lim.addEventListener('input', changeLimit)
 
 selector.bta.forEach((btn, index) => {
 	btn.addEventListener('click', () => {
   	switch(index) {
-	  case 0:
-      	//console.log(selector.txt)
-        selector.txt.style.textAlign = 'left'
+	    case 0: selector.txt.style.textAlign = 'left'
       break;
-      case 1:
-      	selector.txt.style.textAlign = 'center'
+      case 1: selector.txt.style.textAlign = 'center'
       break;
-      case 2:
-      	selector.txt.style.textAlign = 'justify'
+      case 2: selector.txt.style.textAlign = 'justify'
       break;
-      case 3:
-      	selector.txt.style.textAlign = 'right'
+      case 3: selector.txt.style.textAlign = 'right'
       break;
-      default:
-      	console.log('No index found')
+      default: console.log('No index found')
       break;
     }
   })	
