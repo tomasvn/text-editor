@@ -45,7 +45,7 @@ let changeFont = () => {
 	let index = selector.opt.selectedIndex
   
   switch(index) {
-  	case 0: selector.txt.style.fontFamily = 'arial'
+    case 0: selector.txt.style.fontFamily = 'arial'
     break;
     case 1: selector.txt.style.fontFamily = 'serif'
     break;
