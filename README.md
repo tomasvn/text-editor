@@ -8,9 +8,9 @@ A simple rich text editor preview built in HTML, CSS and JS. No frameworks
 
 ## Local Setup
 
-* [ ] Linting
-* [ ] Hooks (Husky)
-* [ ] Static files handling (Gulp)
+* [x] Linting
+* [x] Hooks (Husky)
+* [x] Static files handling (Gulp)
 * [ ] Set up surge.sh deployment
 
 ## Requirements
