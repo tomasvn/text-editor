@@ -12,6 +12,7 @@ A simple rich text editor preview built in HTML, CSS and JS. No frameworks
 * [x] Hooks (Husky)
 * [x] Static files handling (Gulp)
 * [ ] Set up surge.sh deployment
+* [ ] Move from CSS to SCSS
 
 ## Requirements
 
