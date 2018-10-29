@@ -33,6 +33,9 @@ A simple rich text editor preview built in HTML, CSS and JS. No frameworks
 
 ## Upcoming work
 * [ ] Counting words
+* [ ] Color Theme Toggle
+  - [ ] Toggle between few colors
+  - [ ] Manipulate CSS custom properties
 
 ## Outcome
 
