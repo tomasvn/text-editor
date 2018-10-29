@@ -1,0 +1,38 @@
+html {
+  box-sizing: border-box;
+}
+  
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  max-width: 400px;
+  height: 150px;
+  padding: 10px;
+  line-height: 2;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  max-width: 400px;
+}
