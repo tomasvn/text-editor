@@ -29,11 +29,9 @@ A simple rich text editor preview built in HTML, CSS and JS. No frameworks
     - [x] Normal
     - [x] Bold
 * [x] It should have underline functionality
-* [ ] It should add new line on enter
 * [x] It should have an option for limiting characters
 
 ## Upcoming work
-* [ ] Pressing enter key, creates new line
 * [ ] Counting words
 
 ## Outcome
