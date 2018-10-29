@@ -79,7 +79,7 @@ let changeLimit = () => {
 
 let indentTxt = () => {
   selector.txt.style.marginLeft = selector.numInd.value + 'px'
-  //console.log(selector.txt)
+  // console.log(selector.txt)
 }
 
 selector.ar.addEventListener('keyup', printText)
