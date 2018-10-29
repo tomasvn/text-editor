@@ -1,5 +1,5 @@
 /*
-Basic Gulp Workflow v0.6.0
+Basic Gulp Workflow v0.7.3
 Created by: Ngoc Tu Nguyen <nguyenngoct2112@gmail.com>
 Github Repo: https://github.com/tomasvn/gulp-project.git
 **/
@@ -15,14 +15,16 @@ var autoprefixer = require('gulp-autoprefixer')
 var cssnano = require('gulp-cssnano')
 var browserSync = require('browser-sync').create() // Create browser sync instance
 var del = require('del')
-var useref = require('gulp-useref')
 var uglify = require('gulp-uglify')
 var gulpIf = require('gulp-if')
 var imagemin = require('gulp-imagemin')
 var runSequence = require('run-sequence')
 var size = require('gulp-size')
-var notify = require('gulp-notify')
 var surge = require('gulp-surge')
+var babel = require('gulp-babel')
+var maps = require('gulp-sourcemaps')
+var concat = require('gulp-concat')
+var useref = require('gulp-useref')
 
 /**
 Gulp config variables
@@ -37,7 +39,7 @@ var srcRoot = gulpConfig.paths.srcRoot
 Developement Tasks
 */
 
-gulp.task('dev:styles', function () { // First argument is the name of the task, second argument callback function
+gulp.task('dev:styles', () => { // First argument is the name of the task, second argument callback function
   return gulp.src(src.stylesFiles) // Look into this folder for any SCSS files
     .pipe(sass())
     .pipe(sass.sync().on('error', sass.logError)) // If SCSS syntax has any error output it to the CLI
@@ -46,7 +48,7 @@ gulp.task('dev:styles', function () { // First argument is the name of the task,
     .pipe(browserSync.stream())
 })
 
-gulp.task('watch', ['dev:styles'], function () {
+gulp.task('watch', ['dev:styles'], () => {
   browserSync.init({ // Initialize browser sync
     server: srcRoot // Input folder we want to serve to the browser
   })
@@ -59,11 +61,11 @@ gulp.task('watch', ['dev:styles'], function () {
 Clean Tasks
 */
 
-gulp.task('clean:dev', function () {
+gulp.task('clean:dev', () => {
   return del([src.stylesOutput])
 })
 
-gulp.task('clean', function () {
+gulp.task('clean', () => {
   return del(['dist']) // Delete dist folder
 })
 
@@ -71,34 +73,43 @@ gulp.task('clean', function () {
 Build Tasks
 */
 
-gulp.task('build:static', function () {
+gulp.task('build:html', () => {
   return gulp.src(src.htmlFiles)
-    .pipe(useref()) // Concat files to single file
-    .pipe(gulpIf('*.js', uglify())) // Minify only if it is a JS file
-    .pipe(size())
+    .pipe(useref())
     .pipe(gulp.dest(distRoot))
-    .pipe(notify({message: 'Building static files...'}))
 })
 
-gulp.task('build:styles', function () {
+gulp.task('build:js', () => {
+  return gulp.src(src.jsFiles)
+    .pipe(maps.init())
+    .pipe(concat('main.min.js')) // Concat files to single file
+    .pipe(babel())
+    .pipe(uglify()) // Minify only if it is a JS file
+    .pipe(size())
+    .pipe(maps.write('../maps'))
+    .pipe(gulp.dest(dist.jsDist))
+})
+
+gulp.task('build:styles', () => {
   return gulp.src(src.stylesFiles)
+    .pipe(maps.init())
     .pipe(sass())
     .pipe(autoprefixer({
       browsers: ['last 5 versions'],
       cascade: false
     }))
     .pipe(gulpIf('*.css', cssnano()))
+    .pipe(size())
+    .pipe(maps.write('../maps'))
     .pipe(gulp.dest(dist.stylesDist))
-    .pipe(notify({message: 'Building style files...'}))
 })
 
-gulp.task('build:fonts', function () {
+gulp.task('build:fonts', () => {
   return gulp.src(src.fontsFiles)
     .pipe(gulp.dest(dist.fontsDist))
-    .pipe(notify({message: 'Copying fonts...'}))
 })
 
-gulp.task('optimize', function () {
+gulp.task('optimize', () => {
   return gulp.src(src.imgFiles)
     .pipe(imagemin([
       imagemin.gifsicle({interlaced: true}),
@@ -109,11 +120,10 @@ gulp.task('optimize', function () {
       })
     ]))
     .pipe(gulp.dest(dist.imgDist))
-    .pipe(notify({message: 'Image optimization...'}))
 })
 
 gulp.task('build', function (callback) {
-  runSequence('clean', ['build:static', 'build:styles', 'build:fonts', 'optimize'],
+  runSequence('clean', ['build:html', 'build:styles', 'build:js', 'build:fonts', 'optimize'],
     callback
   )
 })
