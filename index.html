@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <title>Text Editor Preview</title>
 </head>
 <body>
@@ -25,12 +26,16 @@
         <label class="input-wrap">Characters Limit
           <input type="number" class="js-char-limit" min="0" max="60">
         </label>
-        <span class="input-wrap">Text Align
+        <div class="input-wrap">Text Align
           <button class="js-btn js-left">Left</button>
           <button class="js-btn js-center">Center</button>
           <button class="js-btn js-justify">Justify</button>
           <button class="js-btn js-right">Right</button>
-        </span>
+        </div>
+        <div class="input-wrap">Text Indenation
+          <input type="number" class="js-indent-num" min="1" max="999" step="1" placeholder="1">
+          <button class="js-indent">Indent Text</button>
+        </div>
         <textarea placeholder="Write here..." rows="20" cols="50" class="js-textarea"></textarea>
         <span class="js-count">0</span>
        <span class="js-text text"></span>

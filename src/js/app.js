@@ -16,17 +16,19 @@ let selector = {
   'num': document.querySelector('.js-number'),
   'opt': document.querySelector('.js-font-select'),
   'con': document.querySelector('.js-count'),
-  'lim': document.querySelector('.js-char-limit')
+  'lim': document.querySelector('.js-char-limit'),
+  'bti': document.querySelector('.js-indent'),
+  'numInd': document.querySelector('.js-indent-num')
 }
 
 let printText = () => {
   selector.txt.innerText = selector.ar.value
   selector.con.innerText = selector.ar.value.length
-  /*let str = selector.ar.value
-  
+  /* let str = selector.ar.value
+
   if(str.replace(/\s/g, "").length >= 40) { //[1.]
-  	//alert('You have more than 40 chars!')
-  }*/
+    alert('You have more than 40 chars!')
+  } */
 }
 
 let changeSize = () => {
@@ -43,19 +45,19 @@ let changeRhytm = () => {
 }
 
 let changeFont = () => {
-	let index = selector.opt.selectedIndex
-  
-  switch(index) {
+  let index = selector.opt.selectedIndex
+
+  switch (index) {
     case 0: selector.txt.style.fontFamily = 'arial'
-    break;
+      break
     case 1: selector.txt.style.fontFamily = 'serif'
-    break;
+      break
     case 2: selector.txt.style.fontFamily = 'sans-serif'
-    break;
+      break
     case 3: selector.txt.style.fontFamily = 'monospace'
-    break;
+      break
     default: console.log('Not working')
-    break;
+      break
   }
 }
 
@@ -65,14 +67,19 @@ let changeLimit = () => {
    * if I want to use === for equality check convert the value to string or convert it to number
    * or use loose equal, but avoid if possible
    * <input type="number"> returns string
-   * 
+   *
    * if(selector.lim.value === 400) {}
    */
 
-  if(selector.lim.value > '0') {
-    //return console.log(typeof(selector.lim.value))
+  if (selector.lim.value > '0') {
+    // return console.log(typeof(selector.lim.value))
     return selector.ar.setAttribute('maxlength', selector.lim.value)
   }
+}
+
+let indentTxt = () => {
+  selector.txt.style.marginLeft = selector.numInd.value + 'px'
+  //console.log(selector.txt)
 }
 
 selector.ar.addEventListener('keyup', printText)
@@ -83,18 +90,20 @@ selector.opt.addEventListener('change', changeFont)
 selector.lim.addEventListener('input', changeLimit)
 
 selector.bta.forEach((btn, index) => {
-	btn.addEventListener('click', () => {
-  	switch(index) {
-	    case 0: selector.txt.style.textAlign = 'left'
-      break;
+  btn.addEventListener('click', () => {
+    switch (index) {
+      case 0: selector.txt.style.textAlign = 'left'
+        break
       case 1: selector.txt.style.textAlign = 'center'
-      break;
+        break
       case 2: selector.txt.style.textAlign = 'justify'
-      break;
+        break
       case 3: selector.txt.style.textAlign = 'right'
-      break;
+        break
       default: console.log('No index found')
-      break;
+        break
     }
-  })	
+  })
 })
+
+selector.bti.addEventListener('click', indentTxt)
