@@ -21,19 +21,24 @@ A simple rich text editor preview built in HTML, CSS and JS. No frameworks
 * [x] It should have a color input for changing font color
 * [x] It should have buttons for text alignment
 * [x] It should have a counter for characters
+    - [ ] It should have settings for counting words
 * [x] It should have select for font families
 * [x] It should indent text
-* [ ] It should add emphasis, strong or italic styling
+* [x] It should add font weight
+    - [x] Light
+    - [x] Normal
+    - [x] Bold
 * [ ] It should have underline functionality
 * [ ] It should add new line on enter
-* [ ] It should have an option for limiting characters
+* [x] It should have an option for limiting characters
 
 ## Upcoming work
 * [x] Indenting text
 * [ ] Bold, epmphasis, italic
 * [ ] Underline
 * [ ] Pressing enter key, creates new line
-* [ ] Limit written characters
+* [x] Limit written characters
+* [ ] Counting words
 
 ## Outcome
 

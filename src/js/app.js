@@ -100,6 +100,14 @@ selector.bta.forEach((btn, index) => {
         break
       case 3: selector.txt.style.textAlign = 'right'
         break
+      case 4: selector.txt.style.fontWeight = '300'
+        break
+      case 5: selector.txt.style.fontWeight = '400'
+        break
+      case 6: selector.txt.style.fontWeight = '600'
+        break
+      case 7: selector.txt.style.textDecoration = 'underline'
+        break
       default: console.log('No index found')
         break
     }
