@@ -21,6 +21,8 @@ let selector = {
   'numInd': document.querySelector('.js-indent-num')
 }
 
+let body = document.body
+
 let printText = () => {
   selector.txt.innerText = selector.ar.value
   selector.con.innerText = selector.ar.value.length
@@ -92,24 +94,41 @@ selector.lim.addEventListener('input', changeLimit)
 selector.bta.forEach((btn, index) => {
   btn.addEventListener('click', () => {
     switch (index) {
-      case 0: selector.txt.style.textAlign = 'left'
-        break
-      case 1: selector.txt.style.textAlign = 'center'
-        break
-      case 2: selector.txt.style.textAlign = 'justify'
-        break
-      case 3: selector.txt.style.textAlign = 'right'
-        break
-      case 4: selector.txt.style.fontWeight = '300'
-        break
-      case 5: selector.txt.style.fontWeight = '400'
-        break
-      case 6: selector.txt.style.fontWeight = '600'
-        break
-      case 7: selector.txt.style.textDecoration = 'underline'
-        break
-      default: console.log('No index found')
-        break
+      case 0:
+        selector.txt.style.textAlign = 'left'
+      break
+      case 1:
+        selector.txt.style.textAlign = 'center'
+      break
+      case 2:
+        selector.txt.style.textAlign = 'justify'
+      break
+      case 3:
+        selector.txt.style.textAlign = 'right'
+      break
+      case 4:
+        selector.txt.style.fontWeight = '300'
+      break
+      case 5:
+        selector.txt.style.fontWeight = '400'
+      break
+      case 6:
+        selector.txt.style.fontWeight = '600'
+      break
+      case 7:
+        selector.txt.style.textDecoration = 'underline'
+      break
+      case 8: 
+        body.style.setProperty('--bg', '#003227')
+        body.style.setProperty('--text-color', '#c4f5ef')
+      break
+      case 9: 
+        body.style.setProperty('--bg', '#fff')
+        body.style.setProperty('--text-color', '#000')
+      break
+      default:
+        console.log('No index found')
+      break
     }
   })
 })
