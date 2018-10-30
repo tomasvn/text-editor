@@ -96,39 +96,39 @@ selector.bta.forEach((btn, index) => {
     switch (index) {
       case 0:
         selector.txt.style.textAlign = 'left'
-      break
+        break
       case 1:
         selector.txt.style.textAlign = 'center'
-      break
+        break
       case 2:
         selector.txt.style.textAlign = 'justify'
-      break
+        break
       case 3:
         selector.txt.style.textAlign = 'right'
-      break
+        break
       case 4:
         selector.txt.style.fontWeight = '300'
-      break
+        break
       case 5:
         selector.txt.style.fontWeight = '400'
-      break
+        break
       case 6:
         selector.txt.style.fontWeight = '600'
-      break
+        break
       case 7:
         selector.txt.style.textDecoration = 'underline'
-      break
-      case 8: 
+        break
+      case 8:
         body.style.setProperty('--bg', '#003227')
         body.style.setProperty('--text-color', '#c4f5ef')
-      break
-      case 9: 
+        break
+      case 9:
         body.style.setProperty('--bg', '#fff')
         body.style.setProperty('--text-color', '#000')
-      break
+        break
       default:
         console.log('No index found')
-      break
+        break
     }
   })
 })

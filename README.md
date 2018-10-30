@@ -30,17 +30,21 @@ A simple rich text editor preview built in HTML, CSS and JS. No frameworks
     - [x] Bold
 * [x] It should have underline functionality
 * [x] It should have an option for limiting characters
+* [x] Color Theme Toggle
+  - [x] Toggle between few colors
+  - [x] Manipulate CSS custom properties
 
 ## Upcoming work
 * [ ] Counting words
-* [ ] Color Theme Toggle
-  - [ ] Toggle between few colors
-  - [ ] Manipulate CSS custom properties
+* [ ] Add basic design
+
+## Design Files
+
+## Demo
 
 ## Outcome
 
 * Learn about new event listeners
 * JS inline style manipulation
-
-## Demo
+* Experiment with CSS Variables
 
