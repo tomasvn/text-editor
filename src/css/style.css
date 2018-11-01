@@ -38,3 +38,11 @@ textarea {
 .text {
   max-width: 400px;
 }
+
+.counter {
+  visibility: hidden;
+}
+
+.counter.is-visible {
+  visibility: visible;
+}

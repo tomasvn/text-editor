@@ -16,9 +16,11 @@ let selector = {
   'num': document.querySelector('.js-number'),
   'opt': document.querySelector('.js-font-select'),
   'con': document.querySelector('.js-count'),
+  'wor': document.querySelector('.js-word'),
   'lim': document.querySelector('.js-char-limit'),
   'bti': document.querySelector('.js-indent'),
-  'numInd': document.querySelector('.js-indent-num')
+  'numInd': document.querySelector('.js-indent-num'),
+  'ena': Array.from(document.querySelectorAll('.js-enable'))
 }
 
 let body = document.body
@@ -84,6 +86,10 @@ let indentTxt = () => {
   // console.log(selector.txt)
 }
 
+/*let countWords = () => {
+
+}*/
+
 selector.ar.addEventListener('keyup', printText)
 selector.sl.addEventListener('input', changeSize)
 selector.co.addEventListener('input', changeColor)
@@ -134,3 +140,30 @@ selector.bta.forEach((btn, index) => {
 })
 
 selector.bti.addEventListener('click', indentTxt)
+
+selector.ena.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    switch(index) {
+      case 0:
+        if (btn.checked === true) {
+          selector.con.classList.add('is-visible')
+          // console.log(selector.out)
+
+        } else {
+          
+          selector.con.classList.remove('is-visible')
+        }
+      break
+      case 1:
+        if (btn.checked === true) {
+          selector.wor.classList.add('is-visible')
+          // console.log(selector.out)
+        
+        } else {
+          
+          selector.wor.classList.remove('is-visible')
+        } 
+      break
+    }
+  })
+})

@@ -13,6 +13,12 @@
         <label class="input-wrap">Increase Font Size<input type="range" class="js-slider" min="0" max="36">
           <span class="js-output-value">0</span>
         </label>
+        <label>Enable Characters Counter
+          <input class="js-enable" type="checkbox">
+        </label>
+        <label>Enable Words Counter
+          <input class="js-enable" type="checkbox">
+        </label>
         <label class="input-wrap">Increase Line Height<input type="number" class="js-number" min="1" max="36" step="0.1" placeholder="1"></label>
         <label class="input-wrap">Font Color<input type="color" class="js-color"></label>
         <label class="input-wrap">Font Family
@@ -49,7 +55,8 @@
           <button class="js-btn">Light</button>
         </div>
         <textarea placeholder="Write here..." rows="20" cols="50" class="js-textarea"></textarea>
-        <span class="js-count">0</span>
+        <span class="js-count counter">0</span>
+        <span class="js-word counter">0</span>
        <span class="js-text text"></span>
      </div>
 <script src="src/js/app.js"></script>
