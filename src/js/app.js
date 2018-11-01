@@ -86,9 +86,9 @@ let indentTxt = () => {
   // console.log(selector.txt)
 }
 
-/*let countWords = () => {
+/* let countWords = () => {
 
-}*/
+} */
 
 selector.ar.addEventListener('keyup', printText)
 selector.sl.addEventListener('input', changeSize)
@@ -143,27 +143,23 @@ selector.bti.addEventListener('click', indentTxt)
 
 selector.ena.forEach((btn, index) => {
   btn.addEventListener('click', () => {
-    switch(index) {
+    switch (index) {
       case 0:
         if (btn.checked === true) {
           selector.con.classList.add('is-visible')
           // console.log(selector.out)
-
         } else {
-          
           selector.con.classList.remove('is-visible')
         }
-      break
+        break
       case 1:
         if (btn.checked === true) {
           selector.wor.classList.add('is-visible')
           // console.log(selector.out)
-        
         } else {
-          
           selector.wor.classList.remove('is-visible')
-        } 
-      break
+        }
+        break
     }
   })
 })

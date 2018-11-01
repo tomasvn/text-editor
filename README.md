@@ -38,6 +38,9 @@ A simple rich text editor preview built in HTML, CSS and JS. No frameworks
 * [ ] Counting words
 * [ ] Add basic design
 
+## Work in progress
+* Checkbox for showing counter for words and characters
+
 ## Design Files
 
 ## Demo
