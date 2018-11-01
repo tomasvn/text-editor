@@ -33,11 +33,15 @@ A simple rich text editor preview built in HTML, CSS and JS. No frameworks
 * [x] Color Theme Toggle
   - [x] Toggle between few colors
   - [x] Manipulate CSS custom properties
+* [ ] It should have a strike through button
+* [ ] It should have a virtual keyboard
 
 ## Upcoming work
 * [ ] Add basic design
+* [ ] Add virtual keyboard
 
 ## Work in progress
+* [ ] Add basic design
 * ~~Checkbox for showing counter for words and characters~~
 
 ## Design Files
