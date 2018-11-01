@@ -21,7 +21,7 @@ A simple rich text editor preview built in HTML, CSS and JS. No frameworks
 * [x] It should have a color input for changing font color
 * [x] It should have buttons for text alignment
 * [x] It should have a counter for characters
-    - [ ] It should have settings for counting words
+    - [x] It should have settings for counting words
 * [x] It should have select for font families
 * [x] It should indent text
 * [x] It should add font weight
@@ -35,11 +35,10 @@ A simple rich text editor preview built in HTML, CSS and JS. No frameworks
   - [x] Manipulate CSS custom properties
 
 ## Upcoming work
-* [ ] Counting words
 * [ ] Add basic design
 
 ## Work in progress
-* Checkbox for showing counter for words and characters
+* ~~Checkbox for showing counter for words and characters~~
 
 ## Design Files
 

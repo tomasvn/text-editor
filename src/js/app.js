@@ -1,5 +1,6 @@
 /*
 * 1. https://stackoverflow.com/questions/26389745/how-to-count-the-number-of-characters-without-spaces
+* 2. https://stackoverflow.com/questions/18679576/counting-words-in-string
 **/
 
 let selector = {
@@ -26,11 +27,14 @@ let selector = {
 let body = document.body
 
 let printText = () => {
-  selector.txt.innerText = selector.ar.value
-  selector.con.innerText = selector.ar.value.length
-  /* let str = selector.ar.value
+  let str = selector.ar.value
+  let wordCount = str.split(/[^\s]+/).length - 1
+  selector.txt.textContent = selector.ar.value
+  selector.con.textContent = selector.ar.value.length
+  
+  selector.wor.textContent = wordCount //[2.]
 
-  if(str.replace(/\s/g, "").length >= 40) { //[1.]
+  /*if(str.replace(/\s/g, "").length >= 40) { //[1.]
     alert('You have more than 40 chars!')
   } */
 }
