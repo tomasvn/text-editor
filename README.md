@@ -41,7 +41,7 @@ A simple rich text editor preview built in HTML, CSS and JS. No frameworks
 * [ ] Add virtual keyboard
 
 ## Work in progress
-* [ ] Add basic design
+* Add basic design
 * ~~Checkbox for showing counter for words and characters~~
 
 ## Design Files
