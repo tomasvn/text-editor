@@ -13,6 +13,8 @@ A simple rich text editor preview built in HTML, CSS and JS. No frameworks
 * [x] Static files handling (Gulp)
 * [ ] Set up surge.sh deployment
 * [ ] Move from CSS to SCSS
+* [ ] Set up E2E Testing? Basic stuff via [Nightwatch.js](http://nightwatchjs.org/)
+    - Experiment with testing, use requirements for test cases?
 
 ## Requirements
 
@@ -34,6 +36,7 @@ A simple rich text editor preview built in HTML, CSS and JS. No frameworks
   - [x] Toggle between few colors
   - [x] Manipulate CSS custom properties
 * [ ] It should have a virtual keyboard
+  - _Build own keyboard or use library for keyboard?_
 
 ## Upcoming work
 * [ ] Add basic design
