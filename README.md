@@ -36,7 +36,6 @@ A simple rich text editor preview built in HTML, CSS and JS. No frameworks
   - [x] Toggle between few colors
   - [x] Manipulate CSS custom properties
 * [ ] It should have a virtual keyboard
-  - _Build own keyboard or use library for keyboard?_
 
 ## Upcoming work
 * [ ] Add basic design
