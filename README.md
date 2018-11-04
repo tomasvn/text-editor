@@ -37,7 +37,7 @@ A simple rich text editor preview built in HTML, CSS and JS. No frameworks
 
 ## Upcoming work
 * [ ] Add basic design
-* [ ] Add virtual keyboard
+* [ ] Add virtual keyboard [Virtual Keyboard](https://franciscohodge.com/projects/simple-keyboard/getting-started/)
 
 ## Work in progress
 * Add basic design
@@ -52,4 +52,3 @@ A simple rich text editor preview built in HTML, CSS and JS. No frameworks
 * Learn about new event listeners
 * JS inline style manipulation
 * Experiment with CSS Variables
-
