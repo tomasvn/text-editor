@@ -128,9 +128,9 @@ gulp.task('build', function (callback) {
   )
 })
 
-/*gulp.task('deploy', function() {
+gulp.task('deploy', function() {
   return surge({
     project: './dist',
-    domain: <project-domain-name>
+    domain: 'text-editor.surge.sh'
   })
-})*/
+})
