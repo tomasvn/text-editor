@@ -76,7 +76,6 @@ Build Tasks
 
 gulp.task('build:html', () => {
   return gulp.src(src.htmlFiles)
-    .pipe(useref())
     .pipe(gulp.dest(distRoot))
 })
 
