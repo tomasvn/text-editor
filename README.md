@@ -49,7 +49,7 @@ A simple rich text editor preview built in HTML, CSS and JS. No frameworks
 ## Design Files
 
 ## Demo
-(https://text-editor.surge.sh/)
+[Link](https://text-editor.surge.sh/)
 
 ## Outcome
 
