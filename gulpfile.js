@@ -25,6 +25,7 @@ var babel = require('gulp-babel')
 var maps = require('gulp-sourcemaps')
 var concat = require('gulp-concat')
 var useref = require('gulp-useref')
+var surge = require('gulp-surge')
 
 /**
 Gulp config variables
