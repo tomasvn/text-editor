@@ -31,10 +31,10 @@ let printText = () => {
   let wordCount = str.split(/[^\s]+/).length - 1
   selector.txt.textContent = selector.ar.value
   selector.con.textContent = selector.ar.value.length
-  
-  selector.wor.textContent = wordCount //[2.]
 
-  /*if(str.replace(/\s/g, "").length >= 40) { //[1.]
+  selector.wor.textContent = wordCount // [2.]
+
+  /* if(str.replace(/\s/g, "").length >= 40) { //[1.]
     alert('You have more than 40 chars!')
   } */
 }
