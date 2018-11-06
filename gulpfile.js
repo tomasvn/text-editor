@@ -8,24 +8,23 @@ Github Repo: https://github.com/tomasvn/gulp-project.git
 Gulp Plugins
 **/
 
-var gulp = require('gulp')
-var gulpConfig = require('./gulp-config.js')
-var sass = require('gulp-sass')
-var autoprefixer = require('gulp-autoprefixer')
-var cssnano = require('gulp-cssnano')
-var browserSync = require('browser-sync').create() // Create browser sync instance
-var del = require('del')
-var uglify = require('gulp-uglify')
-var gulpIf = require('gulp-if')
-var imagemin = require('gulp-imagemin')
-var runSequence = require('run-sequence')
-var size = require('gulp-size')
-var surge = require('gulp-surge')
-var babel = require('gulp-babel')
-var maps = require('gulp-sourcemaps')
-var concat = require('gulp-concat')
-var useref = require('gulp-useref')
-var surge = require('gulp-surge')
+let gulp = require('gulp')
+let gulpConfig = require('./gulp-config.js')
+let sass = require('gulp-sass')
+let autoprefixer = require('gulp-autoprefixer')
+let cssnano = require('gulp-cssnano')
+let browserSync = require('browser-sync').create() // Create browser sync instance
+let del = require('del')
+let uglify = require('gulp-uglify')
+let gulpIf = require('gulp-if')
+let imagemin = require('gulp-imagemin')
+let runSequence = require('run-sequence')
+let size = require('gulp-size')
+let surge = require('gulp-surge')
+let babel = require('gulp-babel')
+let maps = require('gulp-sourcemaps')
+let concat = require('gulp-concat')
+let useref = require('gulp-useref')
 
 /**
 Gulp config variables
@@ -82,7 +81,7 @@ gulp.task('build:html', () => {
 gulp.task('build:js', () => {
   return gulp.src(src.jsFiles)
     .pipe(maps.init())
-    .pipe(concat('main.min.js')) // Concat files to single file
+    .pipe(concat('app.js')) // Concat files to single file
     .pipe(babel())
     .pipe(uglify()) // Minify only if it is a JS file
     .pipe(size())
