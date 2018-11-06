@@ -11,8 +11,8 @@ A simple rich text editor preview built in HTML, CSS and JS. No frameworks
 * [x] Linting
 * [x] Hooks (Husky)
 * [x] Static files handling (Gulp)
-* [ ] Set up surge.sh deployment
-* [ ] Move from CSS to SCSS
+* [x] Set up surge.sh deployment
+* [x] Move from CSS to SCSS
 * [ ] Set up E2E Testing? Basic stuff via [Nightwatch.js](http://nightwatchjs.org/)
     - _Experiment with testing, use requirements for test cases?_
 
