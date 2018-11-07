@@ -82,7 +82,7 @@ gulp.task('build:js', () => {
     .pipe(maps.init())
     .pipe(concat('app.js')) // Concat files to single file
     .pipe(babel())
-    .pipe(uglify()) // Minify only if it is a JS file
+    .pipe(uglify())
     .pipe(size())
     .pipe(maps.write('../maps'))
     .pipe(gulp.dest(dist.jsDist))
