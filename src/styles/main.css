@@ -1,0 +1,48 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg, #fff);
+  color: var(--text-color, #000);
+}
+
+textarea {
+  max-width: 400px;
+  height: 150px;
+  padding: 10px;
+  line-height: 2;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  max-width: 400px;
+}
+
+.counter {
+  visibility: hidden;
+}
+
+.counter.is-visible {
+  visibility: visible;
+}

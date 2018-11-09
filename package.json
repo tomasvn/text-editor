@@ -4,7 +4,7 @@
   "description": "Gulp Project",
   "main": "index.js",
   "scripts": {
-    "dev": "gulp watch || true",
+    "dev": "gulp watch",
     "lint:css": "stylelint ./src/**/*.scss",
     "lint:js": "standard ./src/**/*.js",
     "lint:fix": "stylelint --fix ./src/**/*.scss && standard --fix ./src/**/*.js",
