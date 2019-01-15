@@ -38,6 +38,7 @@ A simple rich text editor preview built in HTML, CSS and JS. No frameworks
 
 ## Upcoming work
 * [ ] Add basic design
+* [ ] Refactoring - Move to ES6 class?
 
 ## Work in progress
 * Add basic design
