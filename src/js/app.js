@@ -3,6 +3,30 @@
 * 2. https://stackoverflow.com/questions/18679576/counting-words-in-string
 **/
 
+/* const selector = {
+  'AREA': '.js-textarea',
+  'TXT': '.js-text',
+  'SLIDER': '.js-slider',
+  'COLOR': '.js-color',
+  'OUTPUT': '.js-output'
+} */
+
+/* class App() {
+  constructor() {
+    this.el = {
+      'area': document.querySelector(selector.AREA),
+      'txt': document.querySelector(selector.TEXT),
+      'slider': document.querySelector(selector.SLIDER),
+      'color': document.querySelector(selector.COLOR),
+      'output': document.querySelector(selector.OUTPUT)
+    }
+  }
+
+  setEvents() {
+
+  }
+} */
+
 let selector = {
   'ar': document.querySelector('.js-textarea'),
   'txt': document.querySelector('.js-text'),
